@@ -1,0 +1,374 @@
+ string player1, player2, playersSelection, player11, player22;
+            string playerTurn = "player1";
+            string A = "1";
+            string B = "2";
+            string C = "3";
+            string D = "4";
+            string E = "5";
+            string F = "6";
+            string G = "7";
+            string H = "8";
+            string I = "9";
+            bool hasWon = false;
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("welcome to tic tac toe!");
+            Console.Title = "Tic Tac Toe ";
+            Console.WriteLine("Press any key to continue!");
+            Console.ReadLine();
+
+            Console.WriteLine("Player's 1 name:");
+            player11 = Console.ReadLine();
+            player1 = player11.ToUpper(); 
+
+            Console.WriteLine("Player's 2 name:");
+            player22 = Console.ReadLine();
+            player2 = player22.ToUpper();
+
+            while (hasWon == false)
+            {
+
+                if (playerTurn == "player1")
+                {
+                    Start:
+                    //player1
+                    Console.WriteLine("{0} turns", player1);
+                    Console.WriteLine("Choose your selection");
+                    Console.WriteLine("{0}|{1}|{2}", A, B, C);
+                    Console.WriteLine("{0}|{1}|{2}", D, E, F);
+                    Console.WriteLine("{0}|{1}|{2}", G, H, I);
+                    playersSelection = Console.ReadLine();
+                    if (playersSelection == "1")
+                    {
+                        if (A == "1")
+                        {
+                            A = "X";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "2")
+                    {
+                        if (B == "2")
+                        {
+                            B = "X";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "3")
+                    {
+                        if (C == "3")
+                        {
+                            C = "X";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "4")
+                    {
+                        if (D == "4")
+                        {
+                            D = "X";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "5")
+                    {
+                        if (E == "5")
+                        {
+                            E = "X";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "6")
+                    {
+                        if (F == "6")
+                        {
+                            F = "X";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "7")
+                    {
+                        if (G == "7")
+                        {
+                            G = "X";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "8")
+                    {
+                        if (H == "8")
+                        {
+                            H = "X";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "9")
+                    {
+                        if (I == "9")
+                        {
+                            I = "X";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else
+                    {
+                        ;
+                    }
+
+
+                    //winnings
+                    if (A == B && B == C)
+                    {
+                        Console.WriteLine(player1 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (D == E && E == F)
+                    {
+                        Console.WriteLine(player1 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (G == H && H == I)
+                    {
+                        Console.WriteLine(player1 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (A == D && D == G)
+                    {
+                        Console.WriteLine(player1 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (B == E && E == H)
+                    {
+                        Console.WriteLine(player1 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (C == F && F == I)
+                    {
+                        Console.WriteLine(player1 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (A == E && E == I)
+                    {
+                        Console.WriteLine(player1 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (C == E && E == G)
+                    {
+                        Console.WriteLine(player1 + " has won!");
+                        hasWon = true;
+                    }
+                    else
+                    {
+                        playerTurn = "player2";
+                    }
+
+
+
+                }
+                //player2
+                if (playerTurn == "player2")
+                {
+                    Start:
+                    Console.WriteLine("{0} turns", player2);
+                    Console.WriteLine("Choose your selection");
+                    Console.WriteLine("{0}|{1}|{2}", A, B, C);
+                    Console.WriteLine("{0}|{1}|{2}", D, E, F);
+                    Console.WriteLine("{0}|{1}|{2}", G, H, I);
+                    playersSelection = Console.ReadLine();
+
+                    if (playersSelection == "1")
+                    {
+                        if (A == "1")
+                        {
+                            A = "O";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "2")
+                    {
+                        if (B == "2")
+                        {
+                            B = "O";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "3")
+                    {
+                        if (C == "3")
+                        {
+                            C = "O";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "4")
+                    {
+                        if (D == "4")
+                        {
+                            D = "O";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "5")
+                    {
+                        if (E == "5")
+                        {
+                            E = "O";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "6")
+                    {
+                        if (F == "6")
+                        {
+                            F = "O";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "7")
+                    {
+                        if (G == "7")
+                        {
+                            G = "O";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "8")
+                    {
+                        if (H == "8")
+                        {
+                            H = "O";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else if (playersSelection == "9")
+                    {
+                        if (I == "9")
+                        {
+                            I = "O";
+                        }
+                        else
+                        {
+                            Console.WriteLine("This place has been chosen, please select another one please.");
+                            goto Start;
+                        }
+                    }
+                    else
+                    {
+                        
+                    }
+
+                    //winnings
+                    if (A == B && B == C)
+                    {
+                        Console.WriteLine(player2 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (D == E && E == F)
+                    {
+                        Console.WriteLine(player2 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (G == H && H == I)
+                    {
+                        Console.WriteLine(player2 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (A == D && D == G)
+                    {
+                        Console.WriteLine(player2 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (B == E && E == H)
+                    {
+                        Console.WriteLine(player2 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (C == F && F == I)
+                    {
+                        Console.WriteLine(player2 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (A == E && E == I)
+                    {
+                        Console.WriteLine(player2 + " has won!");
+                        hasWon = true;
+                    }
+                    else if (C == E && E == G)
+                    {
+                        Console.WriteLine(player2 + " has won!");
+                        hasWon = true;
+                    }
+                    else
+                    {
+                        playerTurn = "player1";
+                    }
+                }
+            }
